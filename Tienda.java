@@ -132,7 +132,7 @@ public class Tienda{
     }
     
     /**
-     * Este metodo muestra en pantalla el total de ventas
+     * Este metodo muestra en pantalla el total de la compra.
      */
     static void ticket(int total) {
         System.out.println();
