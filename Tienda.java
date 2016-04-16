@@ -1,5 +1,5 @@
 /* Porras Trejo Jorge
-   Grupo: 
+   Grupo: 02
 */
 
 import java.util.Scanner;
@@ -46,8 +46,8 @@ public class Tienda{
         int opcion;
         
         do {
-        	System.out.print("\033[H\033[2J");
-			System.out.flush();            
+            System.out.print("\033[H\033[2J");
+            System.out.flush();            
             System.out.println("Menu de la tienda.");
             System.out.println();            
             System.out.println("1.- Realizar compra");
@@ -85,8 +85,8 @@ public class Tienda{
 
         /* Mostramos lista de productos que se puedencomprar */
         do {
-        	System.out.println();
-        	System.out.println("Estos son los productos que vendemos dentro de la tienda.");
+            System.out.println();
+            System.out.println("Estos son los productos que vendemos dentro de la tienda.");
             listar_productos(nombres, productos);
 
             System.out.println();            
@@ -100,18 +100,18 @@ public class Tienda{
         /* El if siguiente es para checar que haya existencias del producto */
         if(existencias > 0) {
             do {
-            	System.out.println();
+                System.out.println();
                 System.out.print("Cuantos productos desea comprar (1-"+existencias+"): ");
                 comprados = sc.nextInt();
             
             } while (comprados < 1 || comprados > existencias);
         
-        	System.out.println();
-        	if(comprados>1){
-        		System.out.print("Añadiste "+ comprados + " " + nombres[opcion-1]+"s");
-        	}else{
-        		System.out.print("Añadiste "+ comprados + " " + nombres[opcion-1]);
-           	}           
+            System.out.println();
+            if(comprados>1){
+                System.out.print("Añadiste "+ comprados + " " + nombres[opcion-1]+"s");
+            }else{
+                System.out.print("Añadiste "+ comprados + " " + nombres[opcion-1]);
+            }           
             
             /* Calculo del total de esta venta */
             total = productos[opcion-1][0] * comprados;
@@ -119,7 +119,7 @@ public class Tienda{
 
             productos[opcion-1][1] = existencias - comprados;
         } else {
-        	System.out.println();            
+            System.out.println();            
             System.out.println("Lo siento, no tenemos ese producto en existencia");
         }
 
@@ -135,7 +135,7 @@ public class Tienda{
      * Este subprograma muestra en pantalla el total de ventas
      */
     static void ticket(int total) {
-    	System.out.println();
+        System.out.println();
         System.out.println("El total de las compras ha sido de: "+total + " pesos.");
         System.out.println();
         espera_tecla();       
