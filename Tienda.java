@@ -132,7 +132,7 @@ public class Tienda{
     }
     
     /**
-     * Este subprograma muestra en pantalla el total de ventas
+     * Este metodo muestra en pantalla el total de ventas
      */
     static void ticket(int total) {
         System.out.println();
@@ -145,8 +145,7 @@ public class Tienda{
      * Espera una tecla;
      */
     static void espera_tecla() {        
-        System.out.println("Presione una tecla para continuar");        
-        /*  nextLine espera una cadena, pero para simplemente esperar una tecla hay que hacerlo con dos nextLines */
+        System.out.println("Presione una tecla para continuar");
         sc.nextLine();
         sc.nextLine();
     }
